@@ -5,10 +5,11 @@ import java.util.List;
 
 import actions.views.EmployeeView;
 import constants.MessageConst;
+import services.EmployeeService;
 
 public class EmployeeValidator {
     public static List<String> validate(
-            EmployeeView service, EmployeeView ev, Boolean codeDuplicateCheckFlag, Boolean passwordCheckFlag) {
+            EmployeeService service, EmployeeView ev, Boolean codeDuplicateCheckFlag, Boolean passwordCheckFlag) {
         List<String> errors = new ArrayList<String>();
 
         String codeError = validateCode(service, ev.getCode(), codeDuplicateCheckFlag);
